@@ -37,7 +37,7 @@ const RecipeCard = ({ recipe }) => {
                     className='rounded-md w-full h-full object-cover cursor-pointer border-2 opacity-0 transition-opacity duration-300'
                     onLoad={(e) => {
                         e.currentTarget.style.opacity = 1;
-                        e.currentTarget.previousElementSibling.style.display = none;
+                        e.currentTarget.previousElementSibling.style.display = "none";
                     }}
                 />
                 <div className='absolute bottom-2 left-2 bg-blue-200 rounded-full p-1 cursor-pointer
