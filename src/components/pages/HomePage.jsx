@@ -16,7 +16,6 @@ const Home = () => {
     try {
       const res = await fetch(`https://api.edamam.com/api/recipes/v2/?app_id=${API_ID}&app_key=${API_KEY}&q=${searchQuery}&type=public`);
       const data = await res.json();
-      console.log('API Response:', data); // Check API response structure
       setRecipe(data.hits || []); // Ensure `data.hits` is an array
       if (data.hits.length === 0) {
         // Trigger toast if no results found
@@ -33,7 +32,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    console.log("API_ID:", API_ID, "API_KEY:", API_KEY); // Ensure env variables are loaded
+    
     fetchRecipe("strawberry ice cream");
   }, []);
 
